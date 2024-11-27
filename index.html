@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Calendar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <aside class="file-panel">
+            <div class="panel-header">
+                <h2>Content Files</h2>
+                 
+            </div>
+            <div class="panel-actions">
+                <button id="export-csv" class="export-button">Export</button>
+                <button id="clear-all-button" class="clear-all-button">Clear All</button>
+            </div>
+            <div class="platform-section">
+                <h3>TikTok</h3>
+                <input type="file" 
+                       class="file-input" 
+                       id="tiktok-input" 
+                       multiple 
+                       accept="video/*"
+                       data-platform="tiktok">
+                <div class="file-list" id="tiktok-files" data-platform="tiktok">
+                    <!-- Files will be populated here -->
+                </div>
+            </div>
+            <div class="platform-section">
+                <h3>Instagram</h3>
+                <input type="file" 
+                       class="file-input" 
+                       id="instagram-input" 
+                       multiple 
+                       accept="video/*,image/*"
+                       data-platform="instagram">
+                <div class="file-list" id="instagram-files" data-platform="instagram">
+                    <!-- Files will be populated here -->
+                </div>
+            </div>
+            <div class="platform-section">
+                <h3>Twitter</h3>
+                <input type="file" 
+                       class="file-input" 
+                       id="twitter-input" 
+                       multiple 
+                       accept="video/*,image/*"
+                       data-platform="twitter">
+                <div class="file-list" id="twitter-files" data-platform="twitter">
+                    <!-- Files will be populated here -->
+                </div>
+            </div>
+            <div class="platform-section">
+                <h3>LinkedIn</h3>
+                <input type="file" 
+                       class="file-input" 
+                       id="linkedin-input" 
+                       multiple 
+                       accept="video/*,image/*"
+                       data-platform="linkedin">
+                <div class="file-list" id="linkedin-files" data-platform="linkedin">
+                    <!-- Files will be populated here -->
+                </div>
+            </div>
+        </aside>
+        
+        <main class="calendar-container">
+            <div class="calendar-header">
+                <button id="prev-month">&lt;</button>
+                <h2 id="current-month">September 2023</h2>
+                <button id="next-month">&gt;</button>
+            </div>
+            <div class="calendar-grid">
+                <div class="weekday">Sun</div>
+                <div class="weekday">Mon</div>
+                <div class="weekday">Tue</div>
+                <div class="weekday">Wed</div>
+                <div class="weekday">Thu</div>
+                <div class="weekday">Fri</div>
+                <div class="weekday">Sat</div>
+                <!-- Calendar days will be populated here -->
+            </div>
+        </main>
+    </div>
+    <div class="detail-panel">
+        <div class="detail-panel-header">
+            <h3>Content Details</h3>
+            <button class="close-panel-button">×</button>
+        </div>
+        <div class="detail-panel-content">
+            <div class="detail-form">
+                <div class="form-group">
+                    <label>File</label>
+                    <div class="filename-display"></div>
+                </div>
+                <div class="form-group">
+                    <label for="detail-title">Title</label>
+                    <input type="text" id="detail-title" placeholder="Add title...">
+                </div>
+                <div class="form-group">
+                    <label for="detail-caption">Caption</label>
+                    <textarea id="detail-caption" placeholder="Add caption..."></textarea>
+                </div>
+                <div class="form-group status-group">
+                    <div class="status-row">
+                        <div>
+                            <label>Status</label>
+                            <button class="detail-publish-toggle"></button>
+                        </div>
+                        <div>
+                            <label>Scheduled</label>
+                            <button class="detail-scheduled-toggle"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel-overlay"></div>
+    <div id="clear-modal" class="modal">
+        <div class="modal-content">
+            <h3>Clear Everything?</h3>
+            <p>Are you sure you want to clear your entire calendar? This cannot be undone.</p>
+            <div class="modal-buttons">
+                <button id="confirm-clear" class="danger-button">Yes, Clear Everything</button>
+                <button id="cancel-clear" class="cancel-button">Cancel</button>
+            </div>
+        </div>
+    </div>
+    <div id="modal-overlay" class="modal-overlay"></div>
+    <script src="app.js"></script>
+</body>
+</html> 

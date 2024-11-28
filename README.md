@@ -60,3 +60,9 @@ Keep track of your TikTok, Instagram, Twitter, and LinkedIn content all in one p
 ## Notes
 
 - Everything is stored locally in your browser. 
+
+Made by zalmaytech: 
+
+My Instagram: [zalmaytech](https://instagram.com/zalmaytech)
+
+My TikTok: [zalmaytech](https://www.tiktok.com/@zalmaytech)

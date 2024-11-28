@@ -1,4 +1,4 @@
-# Local Content Calendar
+# Free Content Calendar for Creators - Data Stays On Your Computer
 
 A browser-based content calendar for organizing your social media content. 
 
